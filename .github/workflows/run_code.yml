@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false  # This prevents GitHub token from being persisted
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -34,9 +36,11 @@ jobs:
     - name: Commit files
       run: |
         git add pix
-        git commit -m "Add downloaded images"
+        git commit -m "Add downloaded images" || echo "No changes to commit"
 
     - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GIT_TOKEN }}
+      env:
+        ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/${{ github.repository }}.git
+        git push origin master
