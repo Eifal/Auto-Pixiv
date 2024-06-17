@@ -25,3 +25,18 @@ jobs:
 
     - name: Run script
       run: python pixiv.py
+
+    - name: Configure Git
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+
+    - name: Commit files
+      run: |
+        git add pix
+        git commit -m "Add downloaded images"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
