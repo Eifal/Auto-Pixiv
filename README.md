@@ -25,7 +25,7 @@ pip install pixivpy3 --upgrade
 python pixiv.py
 ```
 
-I do not recommend `git clone` because it will download all files in the pix folder
+I do not recommend `git clone` because it will download all files in the `pix` folder
 
 ## Usage
 
