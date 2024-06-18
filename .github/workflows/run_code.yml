@@ -30,8 +30,8 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
+        git config --global user.name 'eifal'
+        git config --global user.email 'syahrifal7@gmail.com'
 
     - name: Commit files
       run: |
