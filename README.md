@@ -10,7 +10,7 @@ This project provides a script and API to download illustrations from Pixiv usin
 - **Customizable**: Easily configure which illustrations to download and how they are saved.
 - **Extensible**: Built on top of `pixivpy`, allowing for further customization and extension.
 
-## Installation and Runnibg Locally
+## Installation and Running Locally
 
 Just download `pixiv.py` and install `pixivpy3`
 ```sh
