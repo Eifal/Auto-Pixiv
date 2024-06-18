@@ -11,7 +11,7 @@ sys.dont_write_bytecode = True
 
 # get your refresh_token, and replace _REFRESH_TOKEN
 #  https://github.com/upbit/pixivpy/issues/158#issuecomment-778919084
-_REFRESH_TOKEN = "1ZYq5d3x9xQFBhJnbP9-NVzsHlPHEbpIPIoNBf8t6bU"
+_REFRESH_TOKEN = os.getenv('PIXIV_TOKEN')
 
 
 def main():
