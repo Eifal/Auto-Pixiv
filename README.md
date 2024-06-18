@@ -21,15 +21,21 @@ git clone https://github.com/Eifal/Auto-Pixiv.git
 cd Auto-Pixiv
 pip install -r requirements.txt
 
+</p>
+
 Usage
 Scheduled Downloads
 This project uses GitHub Actions to schedule downloads. By default, it runs every hour.
+
+</p
 
 Running Locally
 To run the script locally, simply execute:
 
 ```sh
 python pixiv.py
+
+</p>
 
 Configuration
 Update the _REFRESH_TOKEN in pixiv.py with your Pixiv refresh token to authenticate API requests.
