@@ -1,4 +1,4 @@
-![Repo Size](https://img.shields.io/github/repo-size/eifal/Auto-Pixiv)
+![GitHub repo size](https://img.shields.io/github/repo-size/Eifal/Auto-Pixiv?style=for-the-badge&logo=Github&labelColor=%234169e1&color=%23191970)
 
 ## Pixiv Downloader
 
@@ -14,29 +14,24 @@ This project provides a script and API to download illustrations from Pixiv usin
 - **Customizable**: Easily configure which illustrations to download and how they are saved.
 - **Extensible**: Built on top of `pixivpy`, allowing for further customization and extension.
 
-## Installation
+## Installation and Runnibg Locally
 
-Clone the repository and install the required dependencies:
-
+Just download `pixiv.py` and install `pixivpy3`
 ```sh
-git clone https://github.com/Eifal/Auto-Pixiv.git
-cd Auto-Pixiv
-pip install -r requirements.txt
+# pixivpy3
+pip install pixivpy3 --upgrade
+
+# execute 
+python pixiv.py
 ```
+
+I do not recommend `git clone` because it will download all files in the pix folder
 
 ## Usage
 
 **Scheduled Downloads**
 
 This project uses GitHub Actions to schedule downloads. By default, it runs every hour.
-
-## Running Locally
-
-To run the script locally, simply execute:
-
-```sh
-python pixiv.py
-```
 
 ## Configuration
 
