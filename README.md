@@ -1,4 +1,5 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Eifal/Auto-Pixiv?style=for-the-badge&logo=Github&labelColor=%234169e1&color=%23191970)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/eifal/Auto-Pixiv?style=for-the-badge&logo=Github&labelColor=4169e1&color=191970)
 
 ## Overview
 
