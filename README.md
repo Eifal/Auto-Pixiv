@@ -1,4 +1,6 @@
-# Pixiv Downloader
+![Repo Size](https://img.shields.io/github/repo-size/eifal/Auto-Pixiv)
+
+## Pixiv Downloader
 
 ![Pixiv](https://raw.githubusercontent.com/Eifal/Auto-Pixiv/main/pix/illust_id_119695250_プロセカツイログ⑨.jpg)
 
