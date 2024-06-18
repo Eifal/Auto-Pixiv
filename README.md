@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-Scheduled Downloads
+**Scheduled Downloads**
 This project uses GitHub Actions to schedule downloads. By default, it runs every hour.
 
 ## Running Locally
