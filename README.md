@@ -1,9 +1,5 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Eifal/Auto-Pixiv?style=for-the-badge&logo=Github&labelColor=%234169e1&color=%23191970)
 
-## Pixiv Downloader
-
-![Pixiv](https://raw.githubusercontent.com/Eifal/Auto-Pixiv/main/pix/illust_id_119695250_プロセカツイログ⑨.jpg)
-
 ## Overview
 
 This project provides a script and API to download illustrations from Pixiv using the powerful [pixivpy](https://github.com/upbit/pixivpy) library.
@@ -25,7 +21,7 @@ pip install pixivpy3 --upgrade
 python pixiv.py
 ```
 
-I do not recommend `git clone` because it will download all files in the `pix` folder
+I do not recommend `git clone` because it will download all files in the `pix` folder :D
 
 ## Usage
 
