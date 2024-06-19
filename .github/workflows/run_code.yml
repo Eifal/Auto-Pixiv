@@ -13,7 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          path-ignore: pix
           persist-credentials: false 
           fetch-depth: 1
 
