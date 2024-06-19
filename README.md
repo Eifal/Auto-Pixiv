@@ -13,22 +13,14 @@ This project provides a script and API to download illustrations from Pixiv usin
 
 ## Installation and Running Locally
 
-Just download `pixiv.py` and install `pixivpy3`
 ```sh
-# pixivpy3
+# git clone
+git clone https://github.com/Eifal/Auto-Pixiv.git -b unm
 pip install pixivpy3 --upgrade
 
 # execute 
 python pixiv.py
 ```
-
-I do not recommend `git clone` because it will download all files in the `pix` folder :D
-
-## Usage
-
-**Scheduled Downloads**
-
-This project uses GitHub Actions to schedule downloads. By default, it runs every hour.
 
 ## Configuration
 
@@ -42,3 +34,7 @@ Update the _REFRESH_TOKEN in pixiv.py with your Pixiv refresh token to authentic
 ```sh
 _REFRESH_TOKEN = "your_refresh_token_here"
 ```
+
+## Scheduled Downloads
+
+This project uses GitHub Actions to schedule downloads. By default, it runs every hour.
