@@ -20,7 +20,7 @@ def main():
     else:
         api = ByPassSniApi()  # Same as AppPixivAPI, but bypass the GFW
         api.require_appapi_hosts()
-    api.auth(refresh_token=os.environ.get('PIXIV_TOKEN'))
+    api.auth(refresh_token=_REFRESH_TOKEN)
 
     # get rankings
     json_result = api.illust_recommended("day")
@@ -30,7 +30,7 @@ def main():
         os.makedirs(directory)
 
     # download top3 day rankings to 'illusts' dir
-    for idx, illust in enumerate(json_result.illusts[:4]):
+    for idx, illust in enumerate(json_result.illusts[:2]):
         image_url = illust.meta_single_page.get("original_image_url", illust.image_urls.large)
         print("{}: {}".format(illust.title, image_url))
 
