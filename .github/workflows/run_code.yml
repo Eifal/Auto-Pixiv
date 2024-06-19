@@ -10,37 +10,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      with:
-        persist-credentials: false 
-        fetch-depth: 1
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          path-ignore: pix
+          persist-credentials: false 
+          fetch-depth: 1
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pixivpy3
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
 
-    - name: Run script
-      run: python pixiv.py
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pixivpy3
 
-    - name: Configure Git
-      run: |
-        git config --global user.name 'eifal'
-        git config --global user.email '${{ secrets.USER_EMAIL }}'
+      - name: Run script
+        run: python pixiv.py
 
-    - name: Commit files
-      run: |
-        git add pix
-        git commit -m "Add downloaded images" || echo "No changes to commit"
+      - name: Configure Git
+        run: |
+          git config --global user.name 'eifal'
+          git config --global user.email '${{ secrets.USER_EMAIL }}'
 
-    - name: Push changes
-      env:
-        ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
-      run: |
-        git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/${{ github.repository }}.git
-        git push origin main
+      - name: Commit files
+        run: |
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Add downloaded images"
+          git status
+
+      - name: Push changes
+        env:
+          ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/${{ github.repository }}.git
+          git push origin main
