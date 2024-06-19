@@ -20,7 +20,7 @@ def main():
     else:
         api = ByPassSniApi()  # Same as AppPixivAPI, but bypass the GFW
         api.require_appapi_hosts()
-    api.auth(refresh_token=_REFRESH_TOKEN)
+    api.auth(refresh_token=os.environ.get('PIXIV_TOKEN'))
 
     # get rankings
     json_result = api.illust_recommended("day")
