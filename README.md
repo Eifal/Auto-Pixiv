@@ -15,7 +15,7 @@ This project provides a script and API to download illustrations from Pixiv usin
 
 ```sh
 # git clone
-git clone https://github.com/Eifal/Auto-Pixiv.git -b unm
+git clone https://github.com/Eifal/Auto-Pixiv.git -b unm --depth=1
 pip install pixivpy3 --upgrade
 
 # execute 
