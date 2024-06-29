@@ -27,28 +27,27 @@ jobs:
           pip install pixivpy3
 
       - name: Determine if script should run
-        id: determine_run
         run: python should_run.py
 
       - name: Run script
-        if: steps.determine_run.outputs.should_run == 'true'
+        if: env.SHOULD_RUN == 'True'
         run: python pixiv.py
 
       - name: Configure Git
-        if: steps.determine_run.outputs.should_run == 'true'
+        if: env.SHOULD_RUN == 'True'
         run: |
           git config --global user.name 'eifal'
           git config --global user.email '${{ secrets.USER_EMAIL }}'
 
       - name: Commit files
-        if: steps.determine_run.outputs.should_run == 'true'
+        if: env.SHOULD_RUN == 'True'
         run: |
           git add .
           git diff-index --quiet HEAD || git commit -m "Add downloaded images"
           git status
 
       - name: Push changes
-        if: steps.determine_run.outputs.should_run == 'true'
+        if: env.SHOULD_RUN == 'True'
         env:
           ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
         run: |
