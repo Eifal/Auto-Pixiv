@@ -1,4 +1,7 @@
 import random
+import os
 
 should_run = random.random() < 0.1
-print(f"::set-output name=should_run::{should_run}")
+
+with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+    env_file.write(f"SHOULD_RUN={should_run}\n")
