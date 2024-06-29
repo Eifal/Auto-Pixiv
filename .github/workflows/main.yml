@@ -28,12 +28,7 @@ jobs:
 
       - name: Determine if script should run
         id: determine_run
-        run: |
-          import random
-          import datetime
-
-          should_run = random.random() < 0.1
-          print(f"::set-output name=should_run::{should_run}")
+        run: python should_run.py
 
       - name: Run script
         if: steps.determine_run.outputs.should_run == 'true'
